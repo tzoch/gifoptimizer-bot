@@ -1,0 +1,29 @@
+Steps to Bot:
+
+1. Monitor /r/all for posts that have .gifs in the title
+    a. incorporate whitelist or blacklist
+        - try to optimize gif from any non-imgur domain
+2. Once a gif is found test to see
+    - if it is animated
+3. Optimize the original.gif using /u/expiredtofu 's method:
+
+    ***********************
+    Q:	What do you use to compress GIFs?
+    A:	I use imagemagick (http://www.imagemagick.org/script/index.php) and gifsicle
+    	(http://www.lcdf.org/gifsicle/). Imagemagick is used to export the frames and
+	    recompress into a gif with transparency, while gifsicle is used to optimize a
+	    bit further and reduce colors.
+    ----
+    Q:	What command lines do you use?
+    A:	The numbers don't matter, as they change each time, but here's a simplified workflow:
+	    Extracting frames:
+	    	convert -coalesce +adjoin Untitled1.gif %03d.tga
+	    Recombining frames:
+	    	convert -fuzz 2% -delay 4 -loop 0 *.tga -layers OptimizePlus -layers OptimizeTransparency Almost.gif
+	    Reducing colors:
+	    	gifsicle -O3 --colors 128 -d4 Almost.gif >Done.gif
+    ***********************
+
+4. Reupload the optimized.gif to imgur
+5. Post comment to original submission
+6. Restart
