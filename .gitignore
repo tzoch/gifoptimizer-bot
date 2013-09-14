@@ -1,12 +1,12 @@
-# Can ignore specific files
+# Mac Files
 .DS_Store
 
-# Use wildcards as well
+# Images
 *~
-*.swp
+*.png
 *.gif
 
-# Can also ignore all directories and files in a directory.
+# Image Directories
 tmp/**/* 
 example_images
 tmp
