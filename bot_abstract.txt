@@ -3,6 +3,9 @@ Steps to Bot:
 1. Monitor /r/all for posts that have .gifs in the title
     a. incorporate whitelist or blacklist
         - try to optimize gif from any non-imgur domain
+    b. incorporate database of gif hashes with optimized imgur urls
+        - type of "cache"
+        - if the gif has already been done before, goto step 5
 2. Once a gif is found test to see
     - if it is animated
 3. Optimize the original.gif using /u/expiredtofu 's method:
@@ -25,5 +28,5 @@ Steps to Bot:
     ***********************
 
 4. Reupload the optimized.gif to imgur
-5. Post comment to original submission
+5. Post comment to original submission with optimized gif
 6. Restart
